@@ -12,10 +12,10 @@ import checkAuth from "./utils/checkAuth.js";
 import { UserController, PostController } from "./controllers/index.js";
 import handleValidationErrors from "./utils/handleValidationErrors.js";
 console.log("РАботает");
+
+// "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority"
 mongoose
-  .connect(
-    "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority",
-  )
+  .connect(process.env.DB_CONNECT)
   .then(() => {
     console.log("DB Ok");
   })
@@ -79,7 +79,7 @@ app.patch(
   PostController.update,
 );
 
-app.listen(4444, (err) => {
+app.listen(process.env.PORT || 4444, (err) => {
   if (err) {
     console.log(err);
   }
