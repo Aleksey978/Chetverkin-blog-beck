@@ -13,7 +13,7 @@ import { UserController, PostController } from "./controllers/index.js";
 import handleValidationErrors from "./utils/handleValidationErrors.js";
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.DATABASE_CONECT)
   .then(() => {
     console.log("DB Ok");
   })
