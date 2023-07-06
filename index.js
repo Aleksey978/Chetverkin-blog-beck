@@ -11,7 +11,7 @@ import checkAuth from "./utils/checkAuth.js";
 
 import { UserController, PostController } from "./controllers/index.js";
 import handleValidationErrors from "./utils/handleValidationErrors.js";
-
+console.log("РАботает");
 mongoose
   .connect(
     "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority",
