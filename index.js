@@ -18,7 +18,9 @@ import handleValidationErrors from "./utils/handleValidationErrors.js";
 
 // "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority"
 mongoose
-  .connect(process.env.DB_CONECT)
+  .connect(
+    "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority",
+  )
   .then(() => {
     console.log("DB Ok");
   })
