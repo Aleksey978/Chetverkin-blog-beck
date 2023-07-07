@@ -20,9 +20,9 @@ export const getLastTags = async (req, res) => {
 
 export const getAll = async (req, res) => {
   try {
-    const posts = await PostModel.find()
-      .populate({ path: "user", select: ["fullName", "avatarUrl"] })
-      .exec();
+    const posts = await PostModel.find();
+    // .populate({ path: "user", select: ["fullName", "avatarUrl"] })
+    // .exec();
     res.json(posts);
   } catch (err) {
     console.log(err);
