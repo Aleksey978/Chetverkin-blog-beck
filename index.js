@@ -15,9 +15,7 @@ console.log("РАботает");
 
 // "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority"
 mongoose
-  .connect(
-    "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority",
-  )
+  .connect(process.env.DB_CONECT)
   .then(() => {
     console.log("DB Ok");
   })
