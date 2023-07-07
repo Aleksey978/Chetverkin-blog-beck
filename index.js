@@ -1,3 +1,7 @@
+import dotenv from "dotenv/config";
+
+// const dotenv = require("dotenv");
+dotenv.config;
 import express from "express";
 import multer from "multer";
 import cors from "cors";
@@ -11,7 +15,6 @@ import checkAuth from "./utils/checkAuth.js";
 
 import { UserController, PostController } from "./controllers/index.js";
 import handleValidationErrors from "./utils/handleValidationErrors.js";
-console.log("РАботает");
 
 // "mongodb+srv://alekseyarg4:oLN6Vu4hd0ZMAEb7@cluster0.mtqazr0.mongodb.net/blog?retryWrites=true&w=majority"
 mongoose
