@@ -1,6 +1,4 @@
 import dotenv from "dotenv/config";
-
-// const dotenv = require("dotenv");
 dotenv.config;
 import express from "express";
 import multer from "multer";
